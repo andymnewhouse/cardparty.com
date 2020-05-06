@@ -20,6 +20,6 @@ class Version extends Tags
             'base' => "v{$major}.{$minor}.{$patch}",
         ];
 
-        return "<a href='/changelog' class='hover:underline'>{$formats[$format]}</a>";
+        return "<a href='https://app.cardparty.games/changelog' target='_blank' class='hover:underline'>{$formats[$format]}</a>";
     }
 }

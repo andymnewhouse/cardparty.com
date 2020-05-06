@@ -1,12 +1,12 @@
 title: Blog
 template: post
-layout: layouts/marketing
+layout: layout
 blueprints:
   - post
-  - entry_link
 mount: 1243c705-292b-4068-b8d3-07220b9506c8
 revisions: false
 route: '/blog/{slug}'
+date: true
 sort_dir: asc
 date_behavior:
   past: public
