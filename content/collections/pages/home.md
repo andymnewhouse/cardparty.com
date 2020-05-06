@@ -53,7 +53,7 @@ sections:
     type: angled_hero
     enabled: true
   -
-    uuid: cb195fe9-9038-42ff-90b5-1e81ad8f1fcf
+    uuid: 14ae6619-612c-4c47-ac5e-b7c0a79c4fd3
     header: 'Sign up for our newsletter'
     paragraph: 'Stay up to date on progress and be the first to know when we launch!'
     type: newsletter
