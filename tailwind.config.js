@@ -1,6 +1,9 @@
 module.exports = {
   purge: {
-    content: ['./resources/views/**/*.html'],
+    content: [
+      './resources/views/**/*.html',
+      './resources/views/**/*.blade.php',
+    ],
     options: {
       whitelist: ['w-64', 'w-32'],
     }
