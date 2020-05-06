@@ -3,7 +3,7 @@ template: post
 layout: layout
 blueprints:
   - post
-mount: 1243c705-292b-4068-b8d3-07220b9506c8
+mount: b2f03628-06ff-48e9-bfd6-f24eb7d06095
 revisions: false
 route: '/blog/{slug}'
 date: true

@@ -1,8 +1,10 @@
 module.exports = {
-  purge: [
-    './resources/views/**/*.html',
-    './resources/views/**/*.blade.php'
-  ],
+  purge: {
+    content: ['./resources/views/**/*.html'],
+    options: {
+      whitelist: ['w-64', 'w-32'],
+    }
+  },
   theme: {
     extend: {
       colors: {
