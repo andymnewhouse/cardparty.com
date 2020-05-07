@@ -17,13 +17,11 @@
             </div>
         </div>
     </div>
-    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-green-400">
-        <div class="w-full grid grid-cols-6 gap-2"
-            style="transform: rotate(9deg) translateY(-100px) translateX(-100px);">
+    <div class="h-64 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-green-400">
+        <div class="w-full grid grid-cols-3 lg:grid-cols-6 gap-2 card-rotate">
             {{ cards }}
         </div>
-        <div class="w-full h-full absolute inset-0"
-            style="background: linear-gradient(99deg, rgba(61,64,91,1) 0%, rgba(255,255,255,0) 25%)">
+        <div class="w-full lg:h-full absolute inset-0 card-shadow">
         </div>
     </div>
 </div>

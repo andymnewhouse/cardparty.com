@@ -1,19 +1,16 @@
-<nav class="navbar bg-blue-gray-800">
+<nav class="navbar bg-blue-gray-800" x-data="{ open: false }">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-16">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <!-- Mobile menu button-->
-                <button
+                <button @click="open = !open"
                     class="inline-flex items-center justify-center p-2 rounded-md text-blue-gray-400 hover:text-white hover:bg-blue-gray-700 focus:outline-none focus:bg-blue-gray-700 focus:text-white transition duration-150 ease-in-out">
-                    <!-- Icon when menu is closed. -->
-                    <!-- Menu open: "hidden", Menu closed: "block" -->
-                    <svg class="block h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <svg :class="{'hidden': open, 'block': !open }" class="block h-6 w-6" stroke="currentColor"
+                        fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
-                    <!-- Icon when menu is open. -->
-                    <!-- Menu open: "block", Menu closed: "hidden" -->
-                    <svg class="hidden h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <svg :class="{'block': open, 'hidden': !open }" class="hidden h-6 w-6" stroke="currentColor"
+                        fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -43,21 +40,12 @@
         </div>
     </div>
 
-    <!--
-    Mobile menu, toggle classes based on menu state.
-
-    Menu open: "block", Menu closed: "hidden"
-  -->
-    <div class="hidden sm:hidden">
+    <div class="hidden sm:hidden" :class="{'block': open, 'hidden': !open }">
         <div class="px-2 pt-2 pb-3">
-            <a href="#"
-                class="block acumin px-3 py-2 rounded-md text-base font-medium text-white bg-blue-gray-900 focus:outline-none focus:text-white focus:bg-blue-gray-700 transition duration-150 ease-in-out">Dashboard</a>
-            <a href="#"
-                class="mt-1 block acumin px-3 py-2 rounded-md text-base font-medium text-blue-gray-300 hover:text-white hover:bg-blue-gray-700 focus:outline-none focus:text-white focus:bg-blue-gray-700 transition duration-150 ease-in-out">Team</a>
-            <a href="#"
-                class="mt-1 block acumin px-3 py-2 rounded-md text-base font-medium text-blue-gray-300 hover:text-white hover:bg-blue-gray-700 focus:outline-none focus:text-white focus:bg-blue-gray-700 transition duration-150 ease-in-out">Projects</a>
-            <a href="#"
-                class="mt-1 block acumin px-3 py-2 rounded-md text-base font-medium text-blue-gray-300 hover:text-white hover:bg-blue-gray-700 focus:outline-none focus:text-white focus:bg-blue-gray-700 transition duration-150 ease-in-out">Calendar</a>
+            {{ nav:main_nav }}
+            <a href="{{ url }}"
+                class="mt-1 block acumin px-3 py-2 rounded-md text-base font-medium text-blue-gray-300 hover:text-white hover:bg-blue-gray-700 focus:outline-none focus:text-white focus:bg-blue-gray-700 transition duration-150 ease-in-out">{{ title }}</a>
+            {{ /nav:main_nav }}
         </div>
     </div>
 </nav>
