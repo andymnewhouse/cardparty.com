@@ -117,6 +117,7 @@ fields:
                 listable: hidden
                 display: 'List UUID'
       buttons:
+        - h1
         - h2
         - h3
         - h4
